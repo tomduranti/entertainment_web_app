@@ -1,23 +1,21 @@
 import { useState } from 'react';
-import Functions from './functions.js'
+import api from './js/api.js/api.js'
 
 export default function App() {
-  const [userInput, setuserInput] = useState('');
+  const [userInput, setUserInput] = useState('');
 
   const {
     getAPIData,
-  } = Functions(userInput)
+  } = api(userInput)
 
   return (
     <>
-      <input 
+      <input
         type='text'
         placeholder='Search for movies or TV series'
-        onChange={(e) => setuserInput(e.target.value)}
+        onChange={(e) => setUserInput(e.target.value)}
       />
-      <button onClick={getAPIData} type='button'>Search</button>
-
-      <div>result is {userInput}</div>
+      <button onClick={() => getAPIData('movie')} type='button'>Search</button>
     </>
   )
 }
