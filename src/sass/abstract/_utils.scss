@@ -1,0 +1,34 @@
+@use './variables.scss' as *;
+
+//Flex classes
+%flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+//Text classes
+.text_capitalize {
+    text-transform: capitalize;
+}
+
+.text_red {
+    color: $red;
+}
+
+.text_white {
+    color: $white;
+}
+
+.text_white--opaque_50 {
+    color: $white--opaque_50;
+}
+
+.text_white--opaque_75 {
+    color: $white--opaque_75;
+}

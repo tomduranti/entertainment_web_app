@@ -1,0 +1,80 @@
+@use "./functions" as *;
+@use "sass:map";
+
+//==========================================================
+//  PRIMITIVES
+//==========================================================
+
+//COLORS
+$black: hsl(0, 0%, 0%);
+$blue--500: hsl(223deg, 23%, 46%);
+$blue--900: hsl(223deg, 36%, 14%);
+$blue--950: hsl(223deg, 30%, 9%);
+$gradient: linear-gradient(180deg, hsl(0 0% 0% / 0), hsl(0 0% 0% / .75));
+$red: hsl(4deg, 69%, 50%);
+$white: hsl(0deg, 0%, 100%);
+$white--opaque_50: hsla(0deg, 0%, 100%, 49.79%);
+$white--opaque_75: hsla(0deg, 0%, 100%, 75%);
+
+//SPACING
+$spacing: (
+  8: to_rem(8),
+  12: to_rem(12),
+  16: to_rem(16),
+  24: to_rem(24),
+  32: to_rem(32),
+  40: to_rem(40),
+  56: to_rem(56),
+  72: to_rem(72),
+  80: to_rem(80),
+);
+
+$special_spacing: (
+  1: to_rem(1),
+  2: to_rem(2),
+  4: to_rem(4),
+);
+
+
+//==========================================================
+//  DESIGN TOKENS
+//==========================================================
+
+/* TOKEN TAXONOMY
+* $spacetype_direction_scale_size
+* spacetype: spacing such as margin, padding, container, inlinesize, or blocksize;
+* direction: inline or block;
+* scale: control (atoms), component (molecules), section (organisms), layout (pages);
+* size: xs (8), sm (16), md (24), lg (32), xl (40);
+*/
+
+//COLORS
+$background_color_blue--950: $blue--950;
+$background_color_blue--900: $blue--900;
+
+//SPACING
+//Gap
+$gap_inline_control--sm: map.get($spacing, 16);
+$gap_inline_control--sm_15: calc(map.get($spacing, 16) - map.get($special_spacing, 1));
+$gap_inline_control--md: map.get($spacing, 24);
+$gap_inline_control--lg: map.get($spacing, 32);
+$gap_inline_control--xlg: map.get($spacing, 40);
+
+$gap_block_control--sm: map.get($spacing, 16);
+$gap_block_control--md: map.get($spacing, 24);
+$gap_block_control--lg: map.get($spacing, 32);
+$gap_block_control--xlg: map.get($spacing, 40);
+
+
+//Padding & margin
+
+//Inline/Block size
+
+//Container
+
+//Radius
+$radius_pill--xs: to_rem(6);
+$radius_pill--md: to_rem(8);
+$radius_pill--lg: to_rem(10);
+$radius_pill--xlg: to_rem(20);
+$radius_pill_full: 50%;
