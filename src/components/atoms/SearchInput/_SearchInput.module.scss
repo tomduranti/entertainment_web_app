@@ -1,0 +1,56 @@
+@use '../../../sass/abstract/variables' as *;
+@use '../../../sass/abstract/mixins' as *;
+@use '../../../sass/abstract/utils' as *;
+
+.search_input {
+    display: flex;
+    gap: $gap_inline_control--sm;
+
+    @include respond_to(min, m_screen) {
+        gap: $gap_inline_control--md;
+    }
+
+    &:after {
+        background-color: $blue--500;
+
+        block-size: 1px;
+        inline-size: 0;
+
+        content: '';
+
+        display: block;
+
+        position: absolute;
+        left: 7%;
+        top: 9%;
+
+        transition: 1s ease;
+    }
+
+
+    &:has(&__input:not(:placeholder-shown)):focus-within::after {
+        inline-size: 100%;
+    }
+    
+
+    &__button {
+        inline-size: 24px;
+        block-size: 24px;
+
+        @include respond_to(min, m_screen) {
+            inline-size: 32px;
+            block-size: 32px;
+        }
+    }
+
+
+    &__input {
+        caret-color: $red;
+
+        color: $white;
+
+        cursor: pointer;
+
+        inline-size: 100%;
+    }
+}

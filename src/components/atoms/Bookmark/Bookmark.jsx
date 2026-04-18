@@ -1,6 +1,6 @@
 import styles from './_Bookmark.module.scss';
 import useBookmark from './Bookmark.js';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Bookmark() {
     const [isBookmark, setIsBookmark] = useState(false);
