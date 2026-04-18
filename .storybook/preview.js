@@ -10,7 +10,7 @@ const preview = {
   },
 };
 
-import '../src/sass/reset.scss'
-import '../src/sass/typography.scss'
-
 export default preview;
+
+import '../src/sass/abstract/_reset.scss';
+import '../src/sass/base/_typography.scss';

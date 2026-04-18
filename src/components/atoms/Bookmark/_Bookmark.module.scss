@@ -1,0 +1,20 @@
+@use '../../../sass/abstract/variables' as *;
+@use '../../../sass/abstract/mixins' as *;
+
+.bookmark {
+    inline-size: 32px;
+    block-size: 32px;
+
+    path {
+        fill: transparent;
+        @include transition(fill, .3s, ease);
+    }
+
+    &:hover path {
+        fill: $white;
+    }
+}
+
+.bookmarked.bookmarked {
+    fill: white;
+}
