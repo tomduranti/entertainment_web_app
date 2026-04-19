@@ -1,0 +1,40 @@
+@use '../../../sass/abstract/variables' as *;
+@use '../../../sass/abstract/utils' as *;
+
+.navbar {
+    @extend %flex_center;
+    justify-content: space-between;
+
+    background-color: $background_color_blue--900;
+
+    padding: $padding_block_control--sm $padding_inline_control--sm_special;
+
+    inline-size: 100%;
+    
+
+    &__logo {
+        inline-size: 25px;
+        block-size: 20px;
+    }
+
+
+    &__links {
+        @extend %flex_center;
+        gap: $gap_inline_control--md;
+    }
+
+
+    &__link {
+        inline-size: 16px;
+        block-size: 16px;
+    }
+
+
+    &__avatar {
+        inline-size: 24px;
+        block-size: 24px;
+
+        border: 1px solid $white;
+        border-radius: $radius_pill_full;
+    }
+}

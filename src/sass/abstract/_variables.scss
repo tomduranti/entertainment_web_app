@@ -52,6 +52,7 @@ $special_spacing: (
 //COLORS
 $background_color_blue--950: $blue--950;
 $background_color_blue--900: $blue--900;
+$background_color_blue--500: $blue--500;
 
 //SPACING
 //Gap
@@ -69,6 +70,8 @@ $gap_block_control--xlg: map.get($spacing, 40);
 
 //Padding & margin
 
+$padding_inline_control--sm_special: calc(map.get($spacing, 16) + .33px);
+$padding_block_control--sm: map.get($spacing, 16);
 
 $margin_inline_control--lg: map.get($spacing, 32);
 
