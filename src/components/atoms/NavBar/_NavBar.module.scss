@@ -10,8 +10,6 @@
 
     padding: $padding_block_control--sm $padding_inline_control--sm_special;
 
-    inline-size: 100%;
-    
 
     &__logo {
         inline-size: 25px;
@@ -41,8 +39,18 @@
         block-size: 16px;
 
         @include respond_to(min, m_screen) {
-            inline-size: 16px;
-            block-size: 16px;
+            inline-size: 20px;
+            block-size: 20px;
+        }
+    }
+
+
+    &__path {
+        fill: $fill_blue--500;
+        @include transition(fill, .4s, ease);
+
+        &--active {
+            fill: $fill_white;
         }
     }
 
@@ -51,7 +59,7 @@
         inline-size: 24px;
         block-size: 24px;
 
-        border: 1px solid $white;
+        outline: 1px solid $white;
         border-radius: $radius_pill_full;
     }
 }
