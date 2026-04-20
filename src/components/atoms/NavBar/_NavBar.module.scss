@@ -1,4 +1,5 @@
 @use '../../../sass/abstract/variables' as *;
+@use '../../../sass/abstract/mixins' as *;
 @use '../../../sass/abstract/utils' as *;
 
 .navbar {
@@ -15,18 +16,34 @@
     &__logo {
         inline-size: 25px;
         block-size: 20px;
+
+        @include respond_to(min, l_screen) {
+            margin-block-end: $margin_block_control--xxxlg;
+        }
     }
 
 
     &__links {
         @extend %flex_center;
         gap: $gap_inline_control--md;
+
+        @include respond_to(min, l_screen) {
+            flex-direction: column;
+            gap: $gap_inline_control--xlg;
+
+            margin-block-end: auto; //to push avatar image to the bottom limit of container
+        }
     }
 
 
     &__link {
         inline-size: 16px;
         block-size: 16px;
+
+        @include respond_to(min, m_screen) {
+            inline-size: 16px;
+            block-size: 16px;
+        }
     }
 
 
