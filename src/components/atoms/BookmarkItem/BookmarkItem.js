@@ -5,7 +5,7 @@ const useBookmark = ({ setIsBookmark }) => {
     }
 
     return {
-        clickHandler,
+        clickHandler
     }
 }
 

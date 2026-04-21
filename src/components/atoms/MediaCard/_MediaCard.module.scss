@@ -1,0 +1,20 @@
+@use '../../../sass/abstract/variables' as *;
+@use '../../../sass/abstract/mixins' as *;
+
+.mediacard_trending {
+    background-image: url("../../../assets/test_image/trending/small.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__container {
+        padding: 8px 8px 14px 16px;
+    }
+
+
+    &__media_date_and_type {
+        display: flex;
+        gap: 19px;
+        margin-bottom: $margin_block_control--xsm;
+    }
+
+}

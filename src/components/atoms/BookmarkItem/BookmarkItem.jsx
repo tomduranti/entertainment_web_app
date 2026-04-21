@@ -1,8 +1,8 @@
-import styles from './_Bookmark.module.scss';
-import useBookmark from './Bookmark.js';
+import styles from './_BookmarkItem.module.scss';
+import useBookmark from './BookmarkItem.js';
 import { useState } from 'react';
 
-export default function Bookmark() {
+export default function BookmarkItem() {
     const [isBookmark, setIsBookmark] = useState(false);
 
     const {

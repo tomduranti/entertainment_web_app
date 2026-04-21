@@ -77,6 +77,7 @@ $padding_inline_control--sm_special: calc(map.get($spacing, 16) + .33px);
 $padding_block_control--sm: map.get($spacing, 16);
 
 $margin_inline_control--lg: map.get($spacing, 32);
+$margin_block_control--xsm: map.get($spacing, 8);
 $margin_block_control--xxxlg: map.get($spacing, 72);
 
 //Inline/Block size
