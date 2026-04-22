@@ -38,6 +38,12 @@
         inline-size: 16px;
         block-size: 16px;
 
+        &:hover {
+            .navbar__path {
+                fill: $red;
+            }
+        }
+
         @include respond_to(min, m_screen) {
             inline-size: 20px;
             block-size: 20px;
