@@ -1,9 +1,9 @@
-const api = (userInput) => {
+const api = (userInput = '') => {
 
-  function getAPIData(category) {
+  function getAPIData(category, function_wrapper) {
 
     let url;
-    
+
     const options = {
       method: 'GET',
       headers: {
@@ -27,7 +27,7 @@ const api = (userInput) => {
 
     fetch(url, options)
       .then(res => res.json())
-      .then(res => res.results)
+      .then(res => function_wrapper(res.results))
       .catch(err => console.error(err));
   }
 
