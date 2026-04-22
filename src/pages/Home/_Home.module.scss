@@ -1,0 +1,27 @@
+@use '../../sass/abstract/variables.scss' as *;
+@use '../../sass/abstract/mixins.scss' as *;
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 16px;
+    padding: 20px 0;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+
+    &__item {
+            flex: 0 0 auto;
+            width: 164px;
+            scroll-snap-align: start;
+
+    }
+}

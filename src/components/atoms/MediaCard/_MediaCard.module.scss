@@ -27,6 +27,11 @@
 
 
     &__container {
+        aspect-ratio: 2 / 3;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
         border-radius: $radius_pill--xs;
 
         padding: $padding_block_control--xsm $padding_inline_control--xsm $padding_block_control--sm_14 $padding_block_control--sm;

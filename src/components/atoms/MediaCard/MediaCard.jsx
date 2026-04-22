@@ -11,7 +11,7 @@ export default function MediaCard({ isTrending, key, release_date, poster_path, 
             {isTrending ?
                 (
                     <article className={`${styles.mediacard}  ${styles['mediacard--trending']}`} key={key}>
-                        <div className={styles.mediacard__container} style={{ background: `url(https://image.tmdb.org/t/p/w500${poster_path}) no-repeat center / cover` }}>
+                        <div className={styles.mediacard__container} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${poster_path})` }}>
                             <BookmarkItem className={`${styles.mediacard__button}`} />
                             <div className={styles.mediacard__media_info}>
                                 <div className={`${styles.mediacard__media_date_and_type}  text_preset_5  text_white--opaque_75`}>

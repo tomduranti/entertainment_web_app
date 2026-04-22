@@ -3,6 +3,8 @@ import api from '../../js/api/api.js';
 import { useState, useEffect } from 'react';
 import MediaCard from '../../components/atoms/MediaCard/MediaCard.jsx';
 
+import styles from './_Home.module.scss';
+
 export default function Home() {
     const [media, setMedia] = useState([]);
 
@@ -11,7 +13,7 @@ export default function Home() {
     } = api()
 
     const trendingMedia = media.map(item =>
-        <li>
+        <li className={styles.carousel__item}>
             <MediaCard
                 isTrending='true'
                 key={item.id}
@@ -33,7 +35,7 @@ export default function Home() {
     return (
         <>
             <span>This is the home page</span>
-            <ul>{trendingMedia}</ul>
+            <ul className={styles.carousel}>{trendingMedia}</ul>
         </>
     )
 }
