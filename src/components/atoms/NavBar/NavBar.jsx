@@ -8,11 +8,11 @@ import avatar from '../../../assets/avatar/avatar.png';
 export default function NavBar() {
     return (
         <div className={styles.navbar}>
-            <a href="/home" className={styles.navbar__logo}>
+            <a href="/" className={styles.navbar__logo}>
                 <img className={styles.navbar__logo} src={logo} alt='logo' />
             </a>
             <nav className={styles.navbar__links}>
-                <NavLink className={styles.navbar__link} to="home">
+                <NavLink className={styles.navbar__link} to="/">
                     {({ isActive }) => (
                         <svg className={styles.navbar__link} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path className={isActive ? styles["navbar__path--active"] : styles["navbar__path"]} d="M8 0H1C.4 0 0 .4 0 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1Zm0 11H1c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1v-7c0-.6-.4-1-1-1ZM19 0h-7c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1Zm0 11h-7c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1v-7c0-.6-.4-1-1-1Z" />
