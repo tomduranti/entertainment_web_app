@@ -29,7 +29,7 @@ export default function MediaCard({ isTrending, release_date, poster_path, media
                                     </div>
                                     <span className='text_uppercase'>{avg_rating.toFixed(1)}</span>
                                 </div>
-                                <h3 className={`text_preset_3   text_white   text_capitalize`}>{title}</h3>
+                                <h3 className={`${title.length > 21 ? styles['reduce_font_size'] : ''}  text_preset_3   text_white   text_capitalize`}>{title}</h3>
                             </div>
                         </div>
                     </article>
@@ -48,7 +48,7 @@ export default function MediaCard({ isTrending, release_date, poster_path, media
                                 </div>
                                 <span className='text_uppercase'>{avg_rating.toFixed(1)}</span>
                             </div>
-                            <h3 className={`text_preset_3   text_white   text_capitalize`}>{title}</h3>
+                            <h3 className={`${title.length > 21 ? styles['reduce_font_size'] : ''}  text_preset_3   text_white   text_capitalize`}>{title}</h3>
                         </div>
                     </article>
                 )
