@@ -26,12 +26,13 @@ export default function Home() {
 
     const media = (isTrending, array) => {
         return array.map(item =>
-            <li className={styles.carousel__slide} key={item.id}>
+            <li className={isTrending ? styles['carousel__item'] : styles['grid__item']} key={item.id}>
                 <MediaCard
                     isTrending={isTrending}
                     release_date={item.first_air_date || item.release_date}
                     poster_path={item.poster_path}
                     media_type={item.media_type}
+                    video={item.video}
                     avg_rating={item.vote_average}
                     title={item.title || item.name}
                 />
@@ -78,13 +79,9 @@ export default function Home() {
                 <h2 className={`${styles.section__title}  text_preset_1  text_white`}>Recommended for you</h2>
 
                 {recommendedForYou.length > 0 ? (
-                    <div className={styles}>
-                        <div className={styles} ref={emblaRef}>
-                            <ul className={styles}>
-                                {media(false, shuffledRecommendedForYou)}
-                            </ul>
-                        </div>
-                    </div>
+                    <ul className={styles.grid}>
+                        {media(false, shuffledRecommendedForYou)}
+                    </ul>
                 ) : (
                     <span className="text_preset_1  text_white--opaque_50">Loading...</span>
                 )}

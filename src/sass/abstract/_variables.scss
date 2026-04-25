@@ -89,7 +89,7 @@ $margin_block_control--xsm: map.get($spacing, 8);
 $margin_block_control--sm: map.get($spacing, 16);
 $margin_block_control--lg: map.get($spacing, 24);
 $margin_block_control--lg_30: calc(map.get($spacing, 32) - map.get($special_spacing, 2));
-$margin_block_control--lg: map.get($spacing, 56);
+$margin_block_control--xxlg: map.get($spacing, 40);
 $margin_block_control--xxxlg: map.get($spacing, 72);
 
 //Inline/Block size

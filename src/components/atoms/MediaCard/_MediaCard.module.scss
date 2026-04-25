@@ -4,9 +4,6 @@
 .mediacard {
     inline-size: 100%;
 
-    max-inline-size: $inline_size--md;
-
-
     &--trending {
         max-inline-size: $inline_size--lg;
     }

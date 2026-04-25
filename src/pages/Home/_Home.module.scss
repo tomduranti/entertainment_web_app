@@ -3,7 +3,7 @@
 
 
 .section {
-  margin-bottom: $margin_block_control--lg;
+  margin-bottom: $margin_block_control--xxlg;
 
   &__title {
     margin-bottom: $margin_block_control--sm;
@@ -27,9 +27,16 @@
   }
 
 
-  &__slide {
+  &__item {
     flex: 0 0 $slide_size;
     min-width: 0;
     padding-inline-start: $slide-spacing;
   }
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(130px, 200px), 1fr));
+  gap: $gap_inline_control--sm;
 }
