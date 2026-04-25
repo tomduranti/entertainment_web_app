@@ -13,12 +13,9 @@
 
 
     &__button {
-        display: block;
+        align-self: end;
 
-        margin-bottom: $margin_block_control--lg_30;
-
-        margin-inline-start: auto;
-
+        order: 1;
 
         &--untrending {
             margin-bottom: $margin_block_control--lg;
@@ -28,6 +25,11 @@
 
     &__container {
         aspect-ratio: 2 / 3;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -39,6 +41,7 @@
 
 
     &__media_info {
+        order: 2;
         padding-block-start: $padding_block_control--sm_14;
     }
 

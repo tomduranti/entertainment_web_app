@@ -10,9 +10,7 @@
         @include transition(fill, .3s, ease);
     }
 
-    &:hover path {
-        fill: $white;
-    }
+    @include link($white);
 }
 
 .is_bookmarked.is_bookmarked {

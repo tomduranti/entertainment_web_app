@@ -1,26 +1,35 @@
 @use '../../sass/abstract/variables.scss' as *;
 @use '../../sass/abstract/mixins.scss' as *;
 
+
+.section {
+  margin-bottom: $margin_block_control--lg;
+
+  &__title {
+    margin-bottom: $margin_block_control--sm;
+  }
+}
+
+
 .carousel {
+  $slide_size: $inline_size--lg;
+  $slide-spacing: $padding_inline_control--sm;
+
+  &__viewport {
+    overflow: hidden;
+  }
+
+
+  &__container {
     display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    gap: 16px;
-    padding: 20px 0;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc($slide-spacing * -1);
+  }
 
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 
-    scroll-snap-type: x mandatory;
-
-    &::-webkit-scrollbar {
-        display: none;
-      }
-
-    &__item {
-            flex: 0 0 auto;
-            width: 164px;
-            scroll-snap-align: start;
-
-    }
+  &__slide {
+    flex: 0 0 $slide_size;
+    min-width: 0;
+    padding-inline-start: $slide-spacing;
+  }
 }
