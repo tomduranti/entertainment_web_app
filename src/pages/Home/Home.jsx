@@ -61,7 +61,7 @@ export default function Home() {
             <section className={styles.section}>
                 <h2 className={`${styles.section__title}  text_preset_1  text_white`}>Trending</h2>
 
-                {trending.length > 0 ? (
+                {/* {trending.length > 0 ? (
                     <div className={styles.carousel}>
                         <div className={styles.carousel__viewport} ref={emblaRef}>
                             <ul className={styles.carousel__container}>
@@ -71,7 +71,7 @@ export default function Home() {
                     </div>
                 ) : (
                     <span className="text_preset_1  text_white--opaque_50">Loading...</span>
-                )}
+                )} */}
 
             </section>
 

@@ -4,3 +4,13 @@ body {
     background-color: $background_color_blue--950;
     block-size: 100%;
 }
+
+
+.page_wrapper {
+    display: grid;
+    gap: $gap_block_control--md;
+
+    width: 91.5%;
+    
+    margin-inline: auto;
+}

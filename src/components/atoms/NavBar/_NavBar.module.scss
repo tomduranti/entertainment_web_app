@@ -10,6 +10,15 @@
 
     padding: $padding_block_control--sm $padding_inline_control--sm_special;
 
+    //the following code is needed to let NavBar overflow its parent's container at mobile viewport
+    inline-size: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-inline-start: -50vw;
+    margin-inline-end: -50vw;
+    //
+
 
     &__logo {
         inline-size: 25px;
