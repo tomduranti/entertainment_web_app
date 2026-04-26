@@ -1,4 +1,5 @@
-@use '../abstract/variables.scss' as *;
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 body {
     background-color: $background_color_blue--950;
@@ -10,7 +11,16 @@ body {
     display: grid;
     gap: $gap_block_control--md;
 
-    width: 91.5%;
+    inline-size: 91.5%;
     
     margin-inline: auto;
+    margin-block-end: $margin_block_layout--sm_13;
+
+    @include respond_to(min, m_screen) {
+        gap: $gap_block_control--lg;
+
+        inline-size: 93.5%;
+
+        margin-block: $margin_block_layout--lg_23 $margin_block_layout--lg_34;
+    }
 }

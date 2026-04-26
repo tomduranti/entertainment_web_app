@@ -7,6 +7,10 @@
 
     &--trending {
         max-inline-size: $inline_size--lg;
+
+        @include respond_to(min, m_screen) {
+            max-inline-size: $inline_size--xlg;
+        }
     }
 
 
@@ -78,9 +82,4 @@
         block-size: 3px;
     }
 
-}
-
-
-.reduce_font_size {
-    font-size: to_rem(13);
 }

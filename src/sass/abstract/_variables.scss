@@ -64,11 +64,13 @@ $gap_inline_control--sm: map.get($spacing, 16);
 $gap_inline_control--sm_15: calc(map.get($spacing, 16) - map.get($special_spacing, 1));
 $gap_inline_control--sm_19: calc(map.get($spacing, 16) + map.get($special_spacing, 2) + map.get($special_spacing, 1));
 $gap_inline_control--md: map.get($spacing, 24);
+$gap_inline_control--lg_30: calc(map.get($spacing, 32) - map.get($special_spacing, 2));
 $gap_inline_control--lg: map.get($spacing, 32);
 $gap_inline_control--xlg: map.get($spacing, 40);
 
 $gap_block_control--sm: map.get($spacing, 16);
 $gap_block_control--md: map.get($spacing, 24);
+$gap_block_control--lg_30: calc(map.get($spacing, 32) - map.get($special_spacing, 2));
 $gap_block_control--lg: map.get($spacing, 32);
 $gap_block_control--xlg: map.get($spacing, 40);
 
@@ -77,6 +79,7 @@ $gap_block_control--xlg: map.get($spacing, 40);
 $padding_inline_control--xsm: map.get($spacing, 8);
 $padding_inline_control--sm_special: calc(map.get($spacing, 16) + .33px);
 $padding_inline_control--sm: map.get($spacing, 16);
+$padding_inline_control--xxlg: map.get($spacing, 40);
 
 $padding_block_control--xsm: map.get($spacing, 8);
 $padding_block_control--sm_14: calc(map.get($spacing, 16) - map.get($special_spacing, 2));
@@ -92,9 +95,19 @@ $margin_block_control--lg_30: calc(map.get($spacing, 32) - map.get($special_spac
 $margin_block_control--xxlg: map.get($spacing, 40);
 $margin_block_control--xxxlg: map.get($spacing, 72);
 
+$margin_block_layout--sm_13: calc(map.get($spacing, 16) - map.get($special_spacing, 2) - map.get($special_spacing, 1));
+$margin_block_layout--lg_23: calc(map.get($spacing, 24) - map.get($special_spacing, 1));
+$margin_block_layout--lg_34: calc(map.get($spacing, 32) + map.get($special_spacing, 2));
+
 //Inline/Block size
+$inline_size--xsm: map.get($spacing, 24);
+$inline_size--sm: map.get($spacing, 32);
 $inline_size--md: calc(map.get($spacing, 80) * 2 + map.get($special_spacing, 4));
 $inline_size--lg: calc(map.get($spacing, 80) * 3);
+$inline_size--xlg: calc(map.get($spacing, 80) * 4);
+
+$block_size--xsm: map.get($spacing, 24);
+$block_size--sm: map.get($spacing, 32);
 
 //Container
 

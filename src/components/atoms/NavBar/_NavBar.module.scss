@@ -12,17 +12,34 @@
 
     //the following code is needed to let NavBar overflow its parent's container at mobile viewport
     inline-size: 100vw;
+
     position: relative;
     left: 50%;
     right: 50%;
-    margin-inline-start: -50vw;
-    margin-inline-end: -50vw;
+
+    margin-inline: -50vw;
     //
+
+    @include respond_to(min, m_screen) {
+        border-radius: $radius_pill--lg;
+        
+        inline-size: 100%;
+
+        left: unset;
+        right: unset;
+
+        margin-inline: 0;
+    }
 
 
     &__logo {
         inline-size: 25px;
         block-size: 20px;
+
+        @include respond_to(min, m_screen) {
+            inline-size: $inline_size--sm;
+            block-size: 25px;
+        }
 
         @include respond_to(min, l_screen) {
             margin-block-end: $margin_block_control--xxxlg;
@@ -71,10 +88,15 @@
 
 
     &__avatar {
-        inline-size: 24px;
-        block-size: 24px;
+        inline-size: $inline_size--xsm;
+        block-size: $block_size--xsm;
 
         outline: 1px solid $white;
         border-radius: $radius_pill_full;
+
+        @include respond_to(min, m_screen) {
+            inline-size: $inline_size--sm;
+            block-size: $block_size--sm;
+          }
     }
 }
