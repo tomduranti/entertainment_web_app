@@ -32,6 +32,16 @@
     }
 
 
+    @include respond_to(min, l_screen) {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        block-size: 960px;
+        flex-direction: column;
+
+        padding: 33.7px 28px;
+    }
+
+
     &__logo {
         inline-size: 25px;
         block-size: 20px;
@@ -43,6 +53,7 @@
 
         @include respond_to(min, l_screen) {
             margin-block-end: $margin_block_control--xxxlg;
+            block-size: 28px;
         }
     }
 
@@ -78,6 +89,12 @@
             inline-size: 20px;
             block-size: 20px;
         }
+
+
+        @include respond_to(min, m_screen) {
+            inline-size: 22px;
+            block-size: 22px;
+        }
     }
 
 
@@ -101,6 +118,11 @@
         @include respond_to(min, m_screen) {
             inline-size: $inline_size--sm;
             block-size: $block_size--sm;
+        }
+
+        @include respond_to(min, l_screen) {
+            inline-size: 40px;
+            block-size: 40px;
         }
     }
 }

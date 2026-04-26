@@ -6,8 +6,14 @@
     display: flex;
     gap: $gap_inline_control--sm;
 
+
     @include respond_to(min, m_screen) {
         gap: $gap_inline_control--md;
+    }
+    
+
+    @include respond_to(min, l_screen) {
+        margin-block-start: 32px;
     }
 
     &:after {

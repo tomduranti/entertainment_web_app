@@ -5,6 +5,11 @@
     inline-size: 32px;
     block-size: 32px;
 
+    @include respond_to(min, l_screen) {
+        inline-size: 40px;
+        block-size: 40px;
+    }
+
     path {
         fill: transparent;
         @include transition(fill, .3s, ease);

@@ -5,13 +5,10 @@ import BookmarkItem from '../BookmarkItem/BookmarkItem.jsx';
 import movie from '../../../assets/category/category_movie.svg';
 import tv from '../../../assets/category/category_tv.svg';
 
-import date from '../../../js/utils/date/date.js';
+import getYearFormat from '../../../js/utils/date/date.js';
 
 export default function MediaCard({ isTrending, release_date, poster_path, media_type, video, avg_rating, title }) {
 
-    const {
-        getYearFormat,
-    } = date()
 
     return (
         <>
