@@ -14,9 +14,9 @@ import styles from './_Home.module.scss';
 
 export default function Home() {
     const [trending, setTrending] = useState([]);
-    const [movies, setMovies] = useState({ recommended: [], latest: [] });
-    const [tvSeries, setTvSeries] = useState({ recommended: [], latest: [] });
-    const recommendedForYou = [...movies.recommended, ...tvSeries.recommended];
+    const [recommendedMovies, setRecommendedMovies] = useState([]);
+    const [recommendedTvSeries, setRecommendedTvSeries] = useState([]);
+    const recommendedForYou = [...recommendedMovies, ...recommendedTvSeries];
     const shuffledRecommendedForYou = fisherYatesShuffle(recommendedForYou);
 
     const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -42,12 +42,8 @@ export default function Home() {
 
     useEffect(() => {
         getAPIData('trending', setTrending);
-        getAPIData('recommended_movies', (data) => {
-            setMovies(items => ({ ...items, recommended: data }))
-        });
-        getAPIData('recommended_tv_series', (data) => {
-            setTvSeries(items => ({ ...items, recommended: data }))
-        });
+        getAPIData('recommended_movies', setRecommendedMovies);
+        getAPIData('recommended_tv_series', setRecommendedTvSeries);
     }, [])
 
     useEffect(() => {
@@ -59,7 +55,7 @@ export default function Home() {
     return (
         <>
             <section className={styles.section}>
-                <h2 className={`${styles.section__title}  text_preset_1  text_white`}>Trending</h2>
+                <h2 className={`${styles.section__title}  text_preset_1  text_white  text_capitalize`}>trending</h2>
 
                 {trending.length > 0 ? (
                     <div className={styles.carousel}>

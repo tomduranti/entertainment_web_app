@@ -11,22 +11,30 @@ export default function getAPIData(category, function_wrapper) {
   };
 
   switch (category) {
-    case 'movie':
+    case 'search_movie':
       url = new URL('/api/search/movie', window.location.origin);
       url.searchParams.set('query', userInput);
       break;
-    case 'tv':
-      url = new URL('/api/search/tv', window.location.origin);
-      url.searchParams.set('query', userInput);
-      break;
-    case 'trending':
-      url = new URL('/api/trending/all/week', window.location.origin);
+    case 'latest_movies':
+      url = new URL('/api/trending/movie/day', window.location.origin);
+      console.log(url);
       break;
     case 'recommended_movies':
       url = new URL('/api/movie/top_rated', window.location.origin);
       break;
+    case 'search_tv_series':
+      url = new URL('/api/search/tv', window.location.origin);
+      url.searchParams.set('query', userInput);
+      break;
+    case 'latest_tv_series':
+      url = new URL('/api/trending/tv/day', window.location.origin);
+      break;
     case 'recommended_tv_series':
       url = new URL('/api/tv/popular', window.location.origin);
+      break;
+    case 'trending':
+      url = new URL('/api/trending/all/week', window.location.origin);
+      console.log(url);
       break;
   }
 
