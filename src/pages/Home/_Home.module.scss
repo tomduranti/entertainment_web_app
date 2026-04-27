@@ -3,7 +3,8 @@
 
 
 .section {
-
+  min-inline-size: 0;
+  
   @include respond_to(min, m_screen) {
     margin-block-end: $margin_block_control--xsm;
   }
@@ -19,6 +20,7 @@
 
 
 .carousel {
+  min-width: 0;
   $slide_size: $inline_size--lg;
   $slide-spacing: $padding_inline_control--sm;
 
