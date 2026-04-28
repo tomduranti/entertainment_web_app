@@ -17,7 +17,6 @@ export default function getAPIData(category, function_wrapper) {
       break;
     case 'latest_movies':
       url = new URL('/api/trending/movie/day', window.location.origin);
-      console.log(url);
       break;
     case 'recommended_movies':
       url = new URL('/api/movie/top_rated', window.location.origin);
@@ -34,7 +33,6 @@ export default function getAPIData(category, function_wrapper) {
       break;
     case 'trending':
       url = new URL('/api/trending/all/week', window.location.origin);
-      console.log(url);
       break;
   }
 

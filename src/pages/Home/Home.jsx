@@ -10,7 +10,10 @@ import Autoplay from 'embla-carousel-autoplay'
 import MediaCard from '../../components/atoms/MediaCard/MediaCard.jsx';
 
 //sass
-import styles from './_Home.module.scss';
+import stylesHome from './_Home.module.scss';
+import stylesApp from '../../sass/base/_App.module.scss';
+
+import ContentGrid from '../../components/organisms/ContentGrid/ContentGrid.jsx';
 
 export default function Home() {
     const [trending, setTrending] = useState([]);
@@ -26,7 +29,7 @@ export default function Home() {
 
     const media = (isTrending, array) => {
         return array.map(item =>
-            <li className={isTrending ? styles['carousel__item'] : styles['grid__item']} key={item.id}>
+            <li className={isTrending ? stylesHome['carousel__item'] : stylesApp['grid__item']} key={item.id}>
                 <MediaCard
                     isTrending={isTrending}
                     release_date={item.first_air_date || item.release_date}
@@ -54,13 +57,12 @@ export default function Home() {
 
     return (
         <>
-            <section className={styles.section}>
-                <h2 className={`${styles.section__title}  text_preset_1  text_white  text_capitalize`}>trending</h2>
-
+            <section className={stylesApp.section}>
+                <h2 className={`${stylesApp.section__title}  text_preset_1  text_white  text_capitalize`}>trending</h2>
                 {trending.length > 0 ? (
-                    <div className={styles.carousel}>
-                        <div className={styles.carousel__viewport} ref={emblaRef}>
-                            <ul className={styles.carousel__container}>
+                    <div className={stylesHome.carousel}>
+                        <div className={stylesHome.carousel__viewport} ref={emblaRef}>
+                            <ul className={stylesHome.carousel__container}>
                                 {media(true, trending)}
                             </ul>
                         </div>
@@ -68,21 +70,9 @@ export default function Home() {
                 ) : (
                     <span className="text_preset_1  text_white--opaque_50">Loading...</span>
                 )}
-
             </section>
 
-            <section>
-                <h2 className={`${styles.section__title}  text_preset_1  text_white`}>Recommended for you</h2>
-
-                {recommendedForYou.length > 0 ? (
-                    <ul className={styles.grid}>
-                        {media(false, shuffledRecommendedForYou)}
-                    </ul>
-                ) : (
-                    <span className="text_preset_1  text_white--opaque_50">Loading...</span>
-                )}
-
-            </section>
+            <ContentGrid pageName={'Recommended for you'} isTrending={false} array={shuffledRecommendedForYou} />
         </>
     )
 }

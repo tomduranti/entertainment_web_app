@@ -51,3 +51,33 @@ body {
         }
     }
 }
+
+
+.section {
+  min-inline-size: 0;
+  
+  @include respond_to(min, m_screen) {
+    margin-block-end: $margin_block_control--xsm;
+  }
+
+  &__title {
+    margin-block-end: $margin_block_control--sm;
+
+    @include respond_to(min, m_screen) {
+      margin-block-end: $margin_block_control--lg;
+    }
+  }
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(130px, 200px), 1fr));
+  gap: $gap_inline_control--sm;
+
+  @include respond_to(min, m_screen) {
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 470px), 1fr));
+    grid-column-gap: $gap_inline_control--lg_30;
+    grid-row-gap: $gap_block_control--md;
+  }
+}
